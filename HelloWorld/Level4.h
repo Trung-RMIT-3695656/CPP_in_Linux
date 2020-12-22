@@ -1,0 +1,1 @@
+void Increment(int& value);
