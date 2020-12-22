@@ -4,7 +4,7 @@
 #include "Log.h"
 #include "math.h"
 #include <Level4.h> // worst way to include .cpp file (through header file)
-#include "Static.h"
+
 
 //#include <Pointer_&_Reference.cpp>
 
@@ -69,13 +69,13 @@ public:
 };
 
 //Implement in other class
-//class Cal_Rectangle::public Interface_Shape{
-//public:
-//	//	implement the method
-//      int getArea() { 
-//         return (width * height); 
-//      }
-//}
+class Rectangle: public Interface_Shape{
+public:
+	//	implement the method
+      int getArea() { 
+         return (width * height); 
+      }
+};
 
 
 
@@ -132,7 +132,7 @@ int main()
 	}
 	
 	//	Bonus level: Static functions
-	int s_var = 10;
+//	int s_var = 10;
 	
 
 	//	Level 4: Pointers & References
@@ -158,6 +158,11 @@ int main()
 	debuglog.Error("hello");
 	
 	//	5.2: Interface
+	Rectangle rec;
+
+	rec.setWidth(10);
+	rec.setHeight(15);
+	rec.getArea();
 	
 	
 	return 0;
