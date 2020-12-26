@@ -5,9 +5,9 @@
 class Random{
 public:
 	static Random& Get(){ // Get function
+		static Random s_Instance; //instantiated the instance
 		return s_Instance;
 	}
-	
 	
 	static float Float() {
 		return Get().IFloat();
@@ -23,7 +23,7 @@ private:
 	
 };
 
-Random Random::s_Instance; //instantiated the instance
+
 
 
 int main()
@@ -34,7 +34,7 @@ int main()
 	//	Creational patterns:
 	//	1. Singleton:
 	std::cout << "Singleton pattern" << "\n";
-	float number = Random::Get().Float();
+	float number = Random::Float();
 	std::cout << number << "\n";
 	
 	
